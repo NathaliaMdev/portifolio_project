@@ -1,0 +1,96 @@
+
+/* reset no css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+body {
+    background: linear-gradient(90deg, #e69c60 0%, #ee2614 100%);
+    background-size: auto 100vh; 
+    font-size: 12px;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+@media (min-width: 400px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* breakpoint */
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+  /* breakpoint */
+  @media (min-width: 1200px) {
+    body {
+      font-size: 20px;
+      background-image: none;
+      background: linear-gradient(90deg, #e69c60 0%, #ee2614 100%);
+    }
+  }
+  
+  header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu {
+    background-color: black;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+   list-style: none; 
+  }
+  
+  .menu a {
+    
+    display: block;
+    padding: 10px 20px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .site-subtitle, 
+  .site-title {
+    color: whitesmoke;
+    text-align: center;
+  }
+  
+  .site-title {
+    font-size: 4em;
+  }
+  
+  .site-subtitle {
+   font-style: italic;
+  }
+  
+  .img-portfolio {
+    height: 180px;
+    width: 180px;
+  }
