@@ -10,9 +10,10 @@
 body {
     background-color:  black;
     background-size: auto 100vh; 
+    font-family: 'Source Code Pro', monospace;
     font-size: 12px;
     height: 100vh;
-    font-family: 'Source Code Pro', monospace;
+    
     
 }
   /* se tiver 400px vai carregar esses elemntos */
@@ -40,7 +41,7 @@ body {
   }
   
   header {
-    background: linear-gradient(90deg, #171111 0%, #1b1918,#fcaa63,#f1cd58 100%);
+    background: linear-gradient(90deg, #171111 0%, #eacd2c,#eea26c,#e75dde 100%);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -52,6 +53,7 @@ body {
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index:1;
   }
   
   .menu ul {
@@ -67,24 +69,27 @@ body {
   }
   
   .menu a {
-    
     display: block;
     padding: 10px 20px;
+    transition: color 2s;
+
   }
   
+  .menu a:active,
+  .menu a:hover{
+      color: rgb(226, 187, 30);
+  }
   a {
     color: white;
     text-decoration: none;
   }
   
-  a:hover {
-    text-decoration: underline;
-  }
 
   .header-content {
     display:flex;
     justify-content: space-evenly;
     align-items: center;
+    transition: transform 10s;
 
   }
   
@@ -106,12 +111,39 @@ body {
    margin-top:30px;
   }
 
+  .site-subtitle {
+    font-family: 'Press Start 2P', cursive;
+     font-style: italic;
+     margin-top:30px;
+    }
+    
+
   .img-gif {
     border-radius: 300px;
     height:300px;
-    
-    
-    
+    overflow:hidden;
+  
+  }
+   .header-content:hover{
+      transition: transform 10s;
+      transform: scale(1.2);
+  }
+  
+  .sobre{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 2em;
+    height:100vh;
+  }
+  .sobre p{
+    color: white;
+    margin-bottom: 10px;
+    text-indent: 3em;
+    text-align: justify;
+  }
+
+  .sobre h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
   }
 
   .contato,
@@ -122,8 +154,19 @@ body {
     font-family: 'Press Start 2P', cursive;
 
   }
-  .contato h2,
-  .portifolio h2{
+
+  @media (min-width:1200px){
+    .container{
+      max-width:1200px;
+      margin-left:auto;
+      margin-right: auto;
+    }
+
+  }
+  
+ 
+  .portifolio h2,
+  .contato h2 {
     font-family: 'Press Start 2P', cursive;
     color: whitesmoke;
     margin-bottom: 1.5em;
@@ -133,6 +176,7 @@ body {
   }
 
   .portifolio .grid {
+    
     display: grid;  /* O grid não força colunas, o flex sim */
     gap: 2em;   /* Normalmente usada com o grid Define o espaçamento entre cada coluna e linha do grid*/
     
@@ -146,7 +190,7 @@ body {
   @media(min-width:880px){
     .portifolio .grid {
   /* Normalmente usada com o grid Define o espaçamento entre cada coluna e linha do grid*/
-     grid-template-columns:repeat(3,240px);
+     grid-template-columns:repeat(3,260px);
      align-items: center;
      justify-content: center; /* Pode ser utilizado no grip */
      height: calc(100vh - 8em - 48px);
@@ -157,23 +201,33 @@ body {
   }
 
   .img-portfolio {
-    height: 240px;
+    height: 180px;
     width: 240px;
     object-fit: cover;
     object-position: left bottom;
-    border-radius: 20px;
-}
+    transition: transform 500ms;
+  }
+  
+  .img-portfolio:hover {
+    transform: scale(1.2) rotate(-2deg);
+  }
+
 .contato .icons {
   text-align: center;
 }
 .contato a {
   color:whitesmoke;
-  font-size: 2em;
+  font-size: 4em;
+  transition: text-shadow 1s;
 }
 
+
+.contato a:active,
 .contato a:hover {
   text-decoration: none;
+  text-shadow: 0px 0px 10px rgb(226, 187, 30);
 }
+
 
 .grid-icons  {
     width:100px;
